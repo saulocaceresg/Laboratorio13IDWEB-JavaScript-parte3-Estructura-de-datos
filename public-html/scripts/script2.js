@@ -35,6 +35,7 @@ function filtrarYTransformar(arr) {
     for (let i = 0; i < nuevoArreglo.length; i++) {
         if (nuevoArreglo[i] < 0) {
             nuevoArreglo.splice(i, 1); // Se borran los negativos
+            i--;
         } else {
             nuevoArreglo[i] = nuevoArreglo[i] ** 2; // Se elevan al cuadrado
         }
@@ -43,7 +44,7 @@ function filtrarYTransformar(arr) {
     // Se suman
     let suma = 0;
     for (let j = 0; j < nuevoArreglo.length; j++) {
-        suma += nuevoArreglo[i];
+        suma += nuevoArreglo[j];
     }
 
     return nuevoArreglo;
